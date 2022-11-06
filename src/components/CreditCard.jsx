@@ -12,7 +12,7 @@ export function CreditCard(props) {
       return i < props.number.length - 4 ? '\u26B9' : num;
     })
     .join('');
-
+  console.log(props.expirationMonth.length );
   return (
     <div
       style={{
@@ -25,6 +25,7 @@ export function CreditCard(props) {
     >
       <span>{props.type}</span>
       <p style={{ color: backgroundColor() }}>{obscureCreditCardNumber}</p>
+      <p>Expires {props.expirationMonth}</p>
     </div>
   );
 }
