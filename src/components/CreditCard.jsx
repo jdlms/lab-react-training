@@ -12,7 +12,7 @@ export function CreditCard(props) {
       return i < props.number.length - 4 ? '\u26B9' : num;
     })
     .join('');
-  console.log(props.expirationMonth.length );
+  console.log(props.expirationMonth.length);
   return (
     <div
       style={{

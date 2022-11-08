@@ -3,6 +3,7 @@ import { BoxColor } from './components/BoxColor';
 import { CreditCard } from './components/CreditCard';
 import { Greetings } from './components/Greetings';
 import { IdCard } from './components/IdCard';
+import { LikeButton } from './components/LikeButton';
 import { Random } from './components/Random';
 import { Rating } from './components/Rating';
 
@@ -80,6 +81,10 @@ function App() {
           bgColor="#ddbb55"
           color="white"
         />
+        <>
+          <LikeButton />
+          <LikeButton />
+        </>
       </div>
     </div>
   );
