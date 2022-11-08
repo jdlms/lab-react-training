@@ -9,6 +9,7 @@ import { Random } from './components/Random';
 import { Rating } from './components/Rating';
 import ironhackerimg from './assets/images/maxence.png';
 import ironhackerglassesimg from './assets/images/maxence-glasses.png';
+import { Dice } from './components/Dice';
 function App() {
   return (
     <div className="App">
@@ -92,6 +93,9 @@ function App() {
             img={ironhackerimg}
             imgClicked={ironhackerglassesimg}
           />
+        </>
+        <>
+          <Dice />
         </>
       </div>
     </div>
