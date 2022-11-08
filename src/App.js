@@ -1,12 +1,14 @@
 import './App.css';
 import { BoxColor } from './components/BoxColor';
+import { ClickablePicture } from './components/ClickablePicture';
 import { CreditCard } from './components/CreditCard';
 import { Greetings } from './components/Greetings';
 import { IdCard } from './components/IdCard';
 import { LikeButton } from './components/LikeButton';
 import { Random } from './components/Random';
 import { Rating } from './components/Rating';
-
+import ironhackerimg from './assets/images/maxence.png';
+import ironhackerglassesimg from './assets/images/maxence-glasses.png';
 function App() {
   return (
     <div className="App">
@@ -84,6 +86,12 @@ function App() {
         <>
           <LikeButton />
           <LikeButton />
+        </>
+        <>
+          <ClickablePicture
+            img={ironhackerimg}
+            imgClicked={ironhackerglassesimg}
+          />
         </>
       </div>
     </div>
