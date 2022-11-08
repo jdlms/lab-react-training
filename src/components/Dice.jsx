@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import diceEmpty from '../assets/images/dice-empty.png';
 import dice1 from '../assets/images/dice1.png';
@@ -8,16 +9,23 @@ import dice5 from '../assets/images/dice5.png';
 import dice6 from '../assets/images/dice6.png';
 
 export function Dice() {
+  const [diceState, setDiceState] = useState(diceEmpty);
   const dice = [dice1, dice2, dice3, dice4, dice5, dice6];
-  function randomDice() {
-    return dice[Math.floor(Math.random() * dice.length)];
-  }
-  const [diceState, setDiceState] = useState(randomDice());
 
   const handleClick = () => {
-    setInterval(() => setDiceState((old) => (old = diceEmpty)), 1000);
-    setDiceState(randomDice());
+    const randomDice = dice[Math.floor(Math.random() * dice.length)];
+    setDiceState((old) => (old = randomDice));
   };
+
+  useEffect(() => {
+    const emptyOneSec = setTimeout(() => {
+      setDiceState(diceEmpty);
+    }, 1000);
+
+    return () => {
+      return emptyOneSec;
+    };
+  }, [diceState]);
 
   return (
     <div>
