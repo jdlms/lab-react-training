@@ -12,12 +12,6 @@ export function ClickablePicture(props) {
         alt="Smiling Ironhacker without pixel sunglasses"
         onClick={handleClick}
       />
-      {/* {glassesState ? (
-        <img
-          src={props.imgClicked}
-          alt="Smiling Ironhacker with pixel sunglasses"
-        />
-      ) : null} */}
     </>
   );
 }
