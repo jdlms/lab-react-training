@@ -10,22 +10,16 @@ import dice6 from '../assets/images/dice6.png';
 
 export function Dice() {
   const [diceState, setDiceState] = useState(diceEmpty);
+
   const dice = [dice1, dice2, dice3, dice4, dice5, dice6];
 
   const handleClick = () => {
-    const randomDice = dice[Math.floor(Math.random() * dice.length)];
-    setDiceState((old) => (old = randomDice));
-  };
-
-  useEffect(() => {
-    const emptyOneSec = setTimeout(() => {
-      setDiceState(diceEmpty);
+    setDiceState(diceEmpty);
+    setTimeout(() => {
+      const randomDice = dice[Math.floor(Math.random() * dice.length)];
+      setDiceState((old) => (old = randomDice));
     }, 1000);
-
-    return () => {
-      return emptyOneSec;
-    };
-  }, [diceState]);
+  };
 
   return (
     <div>
