@@ -11,6 +11,7 @@ import ironhackerimg from './assets/images/maxence.png';
 import ironhackerglassesimg from './assets/images/maxence-glasses.png';
 import { Dice } from './components/Dice';
 import { Carousel } from './components/Carousel';
+import { NumbersTable } from './components/NumbersTable';
 
 function App() {
   return (
@@ -109,6 +110,9 @@ function App() {
             ]}
           />
         </>
+        <div>
+          <NumbersTable limit={12} />
+        </div>
       </div>
     </div>
   );
